@@ -1,0 +1,15 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/Sav/Documents/Unreal Projects/Udemy Courses/ObstacleAssault/Content/MyStuff/TestMap.umap",
+				"C:/Users/Sav/Documents/Unreal Projects/Udemy Courses/ObstacleAssault/Content/Characters/JumpingCube.uasset",
+				"C:/Users/Sav/Documents/Unreal Projects/Udemy Courses/ObstacleAssault/Content/MyStuff/JumpingCube.uasset",
+				"C:/Users/Sav/Documents/Unreal Projects/Udemy Courses/ObstacleAssault/Content/ThirdPerson/Blueprints/BP_ThirdPersonGameMode.uasset"
+			]
+		}
+	]
+}

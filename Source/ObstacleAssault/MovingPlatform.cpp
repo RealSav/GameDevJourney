@@ -24,6 +24,8 @@ void AMovingPlatform::Tick(float DeltaTime)
 
 	// Moves the platform left by 2 units every frame
 	FVector CurrentLocation = GetActorLocation();
-	CurrentLocation.X = CurrentLocation.X - (MoveSpeed * DeltaTime);
+	CurrentLocation.X = CurrentLocation.X + (MoveSpeed.X * DeltaTime);
+	CurrentLocation.Y = CurrentLocation.Y + (MoveSpeed.Y * DeltaTime);
+	CurrentLocation.Z = CurrentLocation.Z + (MoveSpeed.Z * DeltaTime);
 	SetActorLocation(CurrentLocation);
 }

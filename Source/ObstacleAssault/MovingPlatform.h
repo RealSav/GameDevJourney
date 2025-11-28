@@ -24,5 +24,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere)
-	float MoveSpeed = 100.0f;
+	/*float MoveSpeed = 100.0f;*/
+	FVector MoveSpeed = FVector(0.0f, 0.0f, 0.0f);
 };

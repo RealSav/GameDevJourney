@@ -12,6 +12,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMovingPlatform() {}
 
 // ********** Begin Cross Module References ********************************************************
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 OBSTACLEASSAULT_API UClass* Z_Construct_UClass_AMovingPlatform();
 OBSTACLEASSAULT_API UClass* Z_Construct_UClass_AMovingPlatform_NoRegister();
@@ -60,10 +61,16 @@ struct Z_Construct_UClass_AMovingPlatform_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[] = {
 		{ "Category", "MovingPlatform" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/*float MoveSpeed = 100.0f;*/" },
+#endif
 		{ "ModuleRelativePath", "MovingPlatform.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "float MoveSpeed = 100.0f;" },
+#endif
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_MoveSpeed;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -71,7 +78,7 @@ struct Z_Construct_UClass_AMovingPlatform_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMovingPlatform_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMovingPlatform, MoveSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveSpeed_MetaData), NewProp_MoveSpeed_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AMovingPlatform_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMovingPlatform, MoveSpeed), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveSpeed_MetaData), NewProp_MoveSpeed_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMovingPlatform_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMovingPlatform_Statics::NewProp_MoveSpeed,
 };
@@ -112,10 +119,10 @@ AMovingPlatform::~AMovingPlatform() {}
 struct Z_CompiledInDeferFile_FID_Users_Sav_Documents_Unreal_Projects_Udemy_Courses_ObstacleAssault_Source_ObstacleAssault_MovingPlatform_h__Script_ObstacleAssault_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMovingPlatform, AMovingPlatform::StaticClass, TEXT("AMovingPlatform"), &Z_Registration_Info_UClass_AMovingPlatform, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMovingPlatform), 2438352698U) },
+		{ Z_Construct_UClass_AMovingPlatform, AMovingPlatform::StaticClass, TEXT("AMovingPlatform"), &Z_Registration_Info_UClass_AMovingPlatform, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMovingPlatform), 3530130758U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Sav_Documents_Unreal_Projects_Udemy_Courses_ObstacleAssault_Source_ObstacleAssault_MovingPlatform_h__Script_ObstacleAssault_4001045676(TEXT("/Script/ObstacleAssault"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Sav_Documents_Unreal_Projects_Udemy_Courses_ObstacleAssault_Source_ObstacleAssault_MovingPlatform_h__Script_ObstacleAssault_2374306365(TEXT("/Script/ObstacleAssault"),
 	Z_CompiledInDeferFile_FID_Users_Sav_Documents_Unreal_Projects_Udemy_Courses_ObstacleAssault_Source_ObstacleAssault_MovingPlatform_h__Script_ObstacleAssault_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Sav_Documents_Unreal_Projects_Udemy_Courses_ObstacleAssault_Source_ObstacleAssault_MovingPlatform_h__Script_ObstacleAssault_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
